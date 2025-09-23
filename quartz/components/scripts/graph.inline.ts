@@ -625,7 +625,7 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   }
 
   async function shortcutHandler(e: HTMLElementEventMap["keydown"]) {
-    if (e.key === "g" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
+    if (e.key === "g" && (e.ctrlKey || e.metaKey) && !(e.ctrlKey && e.metaKey) && !e.shiftKey) {
       e.preventDefault()
       const anyGlobalGraphOpen = containers.some((container) =>
         container.classList.contains("active"),

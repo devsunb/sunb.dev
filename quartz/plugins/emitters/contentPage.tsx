@@ -6,7 +6,7 @@ import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { FullPageLayout } from "../../cfg"
 import { pathToRoot } from "../../util/path"
-import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
+import { defaultContentPageLayout, sharedContentPageComponents } from "../../../quartz.layout"
 import { Content } from "../../components"
 import { styleText } from "util"
 import { write } from "./helpers"
@@ -47,7 +47,7 @@ async function processContent(
 
 export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpts) => {
   const opts: FullPageLayout = {
-    ...sharedPageComponents,
+    ...sharedContentPageComponents,
     ...defaultContentPageLayout,
     pageBody: Content(),
     ...userOpts,

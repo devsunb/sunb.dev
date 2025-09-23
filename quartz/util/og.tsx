@@ -1,120 +1,20 @@
 import { promises as fs } from "fs"
-import { FontWeight, SatoriOptions } from "satori/wasm"
-import { GlobalConfiguration } from "../cfg"
-import { QuartzPluginData } from "../plugins/vfile"
-import { JSXInternal } from "preact/src/jsx"
-import { FontSpecification, getFontSpecificationName, ThemeKey } from "./theme"
 import path from "path"
-import { QUARTZ } from "./path"
-import { formatDate, getDate } from "../components/Date"
+import { JSXInternal } from "preact/src/jsx"
 import readingTime from "reading-time"
+import { SatoriOptions } from "satori/wasm"
+import { GlobalConfiguration } from "../cfg"
+import { formatDate, getDate } from "../components/Date"
 import { i18n } from "../i18n"
-import { styleText } from "util"
+import { QuartzPluginData } from "../plugins/vfile"
+import { joinSegments, QUARTZ } from "./path"
+import { getFontSpecificationName, ThemeKey } from "./theme"
 
-const defaultHeaderWeight = [700]
-const defaultBodyWeight = [400]
-
-export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: FontSpecification) {
-  // Get all weights for header and body fonts
-  const headerWeights: FontWeight[] = (
-    typeof headerFont === "string"
-      ? defaultHeaderWeight
-      : (headerFont.weights ?? defaultHeaderWeight)
-  ) as FontWeight[]
-  const bodyWeights: FontWeight[] = (
-    typeof bodyFont === "string" ? defaultBodyWeight : (bodyFont.weights ?? defaultBodyWeight)
-  ) as FontWeight[]
-
-  const headerFontName = typeof headerFont === "string" ? headerFont : headerFont.name
-  const bodyFontName = typeof bodyFont === "string" ? bodyFont : bodyFont.name
-
-  // Fetch fonts for all weights and convert to satori format in one go
-  const headerFontPromises = headerWeights.map(async (weight) => {
-    const data = await fetchTtf(headerFontName, weight)
-    if (!data) return null
-    return {
-      name: headerFontName,
-      data,
-      weight,
-      style: "normal" as const,
-    }
-  })
-
-  const bodyFontPromises = bodyWeights.map(async (weight) => {
-    const data = await fetchTtf(bodyFontName, weight)
-    if (!data) return null
-    return {
-      name: bodyFontName,
-      data,
-      weight,
-      style: "normal" as const,
-    }
-  })
-
-  const [headerFonts, bodyFonts] = await Promise.all([
-    Promise.all(headerFontPromises),
-    Promise.all(bodyFontPromises),
-  ])
-
-  // Filter out any failed fetches and combine header and body fonts
-  const fonts: SatoriOptions["fonts"] = [
-    ...headerFonts.filter((font): font is NonNullable<typeof font> => font !== null),
-    ...bodyFonts.filter((font): font is NonNullable<typeof font> => font !== null),
+export async function getSatoriFonts() {
+  return [
+    { name: "Pretendard", data: await fs.readFile(path.resolve(joinSegments(QUARTZ, "static", "pretendard", "Pretendard-Regular.ttf"))), weight: 400, style: "normal" as const },
+    { name: "Pretendard", data: await fs.readFile(path.resolve(joinSegments(QUARTZ, "static", "pretendard", "Pretendard-Bold.ttf"))), weight: 700, style: "normal" as const },
   ]
-
-  return fonts
-}
-
-/**
- * Get the `.ttf` file of a google font
- * @param fontName name of google font
- * @param weight what font weight to fetch font
- * @returns `.ttf` file of google font
- */
-export async function fetchTtf(
-  rawFontName: string,
-  weight: FontWeight,
-): Promise<Buffer<ArrayBufferLike> | undefined> {
-  const fontName = rawFontName.replaceAll(" ", "+")
-  const cacheKey = `${fontName}-${weight}`
-  const cacheDir = path.join(QUARTZ, ".quartz-cache", "fonts")
-  const cachePath = path.join(cacheDir, cacheKey)
-
-  // Check if font exists in cache
-  try {
-    await fs.access(cachePath)
-    return fs.readFile(cachePath)
-  } catch (error) {
-    // ignore errors and fetch font
-  }
-
-  // Get css file from google fonts
-  const cssResponse = await fetch(
-    `https://fonts.googleapis.com/css2?family=${fontName}:wght@${weight}`,
-  )
-  const css = await cssResponse.text()
-
-  // Extract .ttf url from css file
-  const urlRegex = /url\((https:\/\/fonts.gstatic.com\/s\/.*?.ttf)\)/g
-  const match = urlRegex.exec(css)
-
-  if (!match) {
-    console.log(
-      styleText(
-        "yellow",
-        `\nWarning: Failed to fetch font ${rawFontName} with weight ${weight}, got ${cssResponse.statusText}`,
-      ),
-    )
-    return
-  }
-
-  // fontData is an ArrayBuffer containing the .ttf file data
-  const fontResponse = await fetch(match[1])
-  const fontData = Buffer.from(await fontResponse.arrayBuffer())
-  await fs.mkdir(cacheDir, { recursive: true })
-  await fs.writeFile(cachePath, fontData)
-
-  return fontData
 }
 
 export type SocialImageOptions = {

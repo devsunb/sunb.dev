@@ -3,6 +3,8 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { classNames } from "../util/lang"
 
 const TagList: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
+  const excludeTags = ["review"]
+
   const tags = fileData.frontmatter?.tags
   if (tags && tags.length > 0) {
     return (
