@@ -1,0 +1,351 @@
+@font-face {
+  font-family: Pretendard;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    local("Pretendard Black"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Black.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Black.woff)
+      format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    local("Pretendard ExtraBold"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-ExtraBold.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-ExtraBold.woff)
+      format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Pretendard Bold"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Bold.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Bold.woff)
+      format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local("Pretendard SemiBold"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-SemiBold.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-SemiBold.woff)
+      format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Pretendard Medium"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Medium.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Medium.woff)
+      format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Pretendard Regular"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Regular.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Regular.woff)
+      format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("Pretendard Light"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Light.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Light.woff)
+      format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-weight: 200;
+  font-display: swap;
+  src:
+    local("Pretendard ExtraLight"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-ExtraLight.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-ExtraLight.woff)
+      format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-weight: 100;
+  font-display: swap;
+  src:
+    local("Pretendard Thin"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Thin.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/Pretendard-Thin.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 100;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-Thin.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 100;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-ThinItalic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-ExtraLight.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-ExtraLightItalic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-Light.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-LightItalic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-Regular.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-Italic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-Medium.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-MediumItalic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-SemiBold.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-SemiBoldItalic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-Bold.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-BoldItalic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-ExtraBold.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-ExtraBoldItalic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-Heavy.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Custom";
+  font-display: swap;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/iosevka-custom/IosevkaCustom-HeavyItalic.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-ExtraLight.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-ExtraLightItalic.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-Light.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-LightItalic.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-Regular.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-Italic.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-SemiBold.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-SemiBoldItalic.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-Bold.subset.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Sarasa Term K";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("https://cdn.jsdelivr.net/gh/devsunb/fonts/sarasa-term-k/SarasaTermK-BoldItalic.subset.woff2")
+    format("woff2");
+}
