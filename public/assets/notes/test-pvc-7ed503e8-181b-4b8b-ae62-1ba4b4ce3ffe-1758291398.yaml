@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-pvc-7ed503e8-181b-4b8b-ae62-1ba4b4ce3ffe
+  namespace: vm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-pvc-7ed503e8-181b-4b8b-ae62-1ba4b4ce3ffe
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: test-pvc-7ed503e8-181b-4b8b-ae62-1ba4b4ce3ffe
+    spec:
+      containers:
+      - name: alpine
+        image: alpine
+        command:
+        - /bin/cat
+        tty: true
+        stdin: true
+        volumeMounts:
+        - name: data
+          mountPath: /data
+          readOnly: true
+      tolerations:
+      - effect: NoSchedule
+        operator: Exists
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: vmsingle-main-b
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 0

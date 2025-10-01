@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>선비의 지식 곳간</title>
+      <link>https://sunb.dev</link>
+      <description>최근 10 건 on 선비의 지식 곳간</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>2025-09-27 (토)</title>
+    <link>https://sunb.dev/notes/2025/09/2025-09-27</link>
+    <guid>https://sunb.dev/notes/2025/09/2025-09-27</guid>
+    <description><![CDATA[ 2025-09-27 (토) asdf asdf asdf1 asdfasdf Footnotes asdf a ↩ . ]]></description>
+    <pubDate>Sun, 28 Sep 2025 08:06:04 GMT</pubDate>
+  </item><item>
+    <title>2025-09-28 (일)</title>
+    <link>https://sunb.dev/notes/2025/09/2025-09-28</link>
+    <guid>https://sunb.dev/notes/2025/09/2025-09-28</guid>
+    <description><![CDATA[ 2025-09-28 (일) Transclude of 2025-09-27#^a. ]]></description>
+    <pubDate>Sun, 28 Sep 2025 08:05:57 GMT</pubDate>
+  </item><item>
+    <title>2025-09-26 (금)</title>
+    <link>https://sunb.dev/notes/2025/09/2025-09-26</link>
+    <guid>https://sunb.dev/notes/2025/09/2025-09-26</guid>
+    <description><![CDATA[ 2025-09-26 (금) print(db.chat.countDocuments()); print(db.course.countDocuments()); print(db.courseSearchHistory.countDocuments()); print(db.courseSynonym.countDocuments()); print(db.mentor.countDocuments()); print(db.postSynonym.countDocuments()); print(db.project.countDocuments()); print(db.questio... ]]></description>
+    <pubDate>Thu, 25 Sep 2025 17:26:48 GMT</pubDate>
+  </item><item>
+    <title>Debian Linux 서버에 Tailscale 설치</title>
+    <link>https://sunb.dev/notes/2025/09/2025-09-26-022140</link>
+    <guid>https://sunb.dev/notes/2025/09/2025-09-26-022140</guid>
+    <description><![CDATA[ Debian Linux 서버에 Tailscale 설치 Install Tailscale on Debian Bookworm · Tailscale Docs curl -fsSL pkgs.tailscale.com/stable/debian/bookworm.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg &gt;/dev/null curl -fsSL pkgs.tailscale.com/stable/debian/bookworm.tailscale-keyring.list ... ]]></description>
+    <pubDate>Thu, 25 Sep 2025 17:26:16 GMT</pubDate>
+  </item><item>
+    <title>cargo install Could not find directory of OpenSSL installation</title>
+    <link>https://sunb.dev/notes/2025/09/2025-09-25-214638</link>
+    <guid>https://sunb.dev/notes/2025/09/2025-09-25-214638</guid>
+    <description><![CDATA[ cargo install Could not find directory of OpenSSL installation sudo apt-get install libssl-dev. ]]></description>
+    <pubDate>Thu, 25 Sep 2025 12:55:43 GMT</pubDate>
+  </item><item>
+    <title>2025-09-24 (수)</title>
+    <link>https://sunb.dev/notes/2025/09/2025-09-24</link>
+    <guid>https://sunb.dev/notes/2025/09/2025-09-24</guid>
+    <description><![CDATA[ 2025-09-24 (수) 2025-09-24 (수) markdown 환경 정리 markdown to slack mrkdwn copy wikilink 18:01 toggle markdown render new note without ask 23:50 aliases rename 이춘봉참치 데브옵스 저녁식사. ]]></description>
+    <pubDate>Wed, 24 Sep 2025 06:14:29 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://sunb.dev/</link>
+    <guid>https://sunb.dev/</guid>
+    <description><![CDATA[ 안녕하세요! 이곳은 선비의 개인 위키입니다. 곳간에서 인심난다 . ]]></description>
+    <pubDate>Tue, 23 Sep 2025 17:34:36 GMT</pubDate>
+  </item><item>
+    <title>References</title>
+    <link>https://sunb.dev/refs/</link>
+    <guid>https://sunb.dev/refs/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 23 Sep 2025 17:04:27 GMT</pubDate>
+  </item><item>
+    <title>Neovim Session</title>
+    <link>https://sunb.dev/notes/2025/08/2025-08-26-192203</link>
+    <guid>https://sunb.dev/notes/2025/08/2025-08-26-192203</guid>
+    <description><![CDATA[ Neovim Session auto-session 비슷한 플러그인 여러 개 있었는데 다 한 번씩 깔아서 써보니까 위 플러그인이 쓸데없이 경로 지정해서 세션 저장하거나 뭐 선택하고 이런 기능 없이 깔끔하면서 딱 자동 세션 저장, 복원 잘 돼서 선택했었던 것으로 기억함 Shatur/neovim-session-manager echasnovski/mini.sessions folke/persistence.nvim jedrzejboczar/possession.nvim mackeper/SeshMgr.nvim olimorris/persisted.... ]]></description>
+    <pubDate>Tue, 23 Sep 2025 17:04:24 GMT</pubDate>
+  </item><item>
+    <title>Neovim 재시작 시 폴드 유지</title>
+    <link>https://sunb.dev/notes/2025/08/2025-08-26-192202</link>
+    <guid>https://sunb.dev/notes/2025/08/2025-08-26-192202</guid>
+    <description><![CDATA[ Neovim 재시작 시 폴드 유지 Keep folds when restarting Neovim 2025-08-21 13:16 어제 Neovim folds 구성함 파일 버퍼 열려있는 상태에서 Neovim 껐다 켤 때 Neovim 파일 버퍼 닫았다가 열 때 폴드 유지되는 건 auto-session 만 있어도 됐음 Neovim Session 역시 Neovim 플러그인만큼 “고장나지 않았으면 고치지 마라” 를 실천해야 하는 곳이 없는 것 같다… 문제는 파일 버퍼 닫고 Neovim 재시작 후 다시 파일 버퍼 열면 폴드 초기화 되어 있는 것 ... ]]></description>
+    <pubDate>Tue, 23 Sep 2025 17:04:23 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
